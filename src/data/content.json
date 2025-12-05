@@ -1,0 +1,14 @@
+{
+    "app_name": "Le Village Numérique Résistant",
+    "missions": {
+        "m1": {
+            "title": "L'Alerte aux Big Tech",
+            "description": "L'obsolescence programmée et la dépendance aux licences coûteuses."
+        },
+        "m2": {
+            "title": "La Potion Magique du Réemploi",
+            "description": "Comment donner une seconde vie au matériel grâce aux logiciels libres."
+        }
+    },
+    "quiz_questions": []
+}
