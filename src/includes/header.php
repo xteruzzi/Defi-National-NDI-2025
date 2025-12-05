@@ -3,8 +3,6 @@
 $base_url = '/'; 
 ?>
 
-<link rel="stylesheet" href="../../public_html/assets/css/style.css" />
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
