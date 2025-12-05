@@ -23,6 +23,7 @@ $base_url = '/';
         <ul>
             <li><a href="<?= $base_url ?>index.php">Accueil</a></li>
             <li><a href="<?= $base_url ?>solutions.php">Solutions NIRD</a></li>
+            <li><a href="<?= $base_url ?>SnakeHidden.html">HiddenSnake</a></li>
         </ul>
     </nav>
 </header>
