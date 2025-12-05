@@ -1,28 +1,61 @@
-// Fichier: main.js
-// Logique JavaScript pour le projet NIRD
+// Fichier: public_html/assets/js/main.js
+// Logique JavaScript pour le projet NIRD - Dossier de Résistance
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Projet NIRD : Script principal chargé !");
-
-    // 1. Amélioration de l'interactivité du bouton principal
-    const nextButton = document.getElementById('btn-next');
-    const ctaArea = document.getElementById('cta-area');
-
-    if (nextButton && ctaArea) {
-        let hoverCount = 0;
+    
+    // --- Fonctionnalité 1 : Suivi des Piliers NIRD (solutions.php) ---
+    const solutionSections = document.querySelectorAll('.piliers-grid .card');
+    
+    if (solutionSections.length > 0) {
+        let pillarsChecked = 0;
+        const totalPillars = solutionSections.length;
+        const actionFinaleTitle = document.querySelector('.action-finale h3');
         
-        // Ajout d'une petite animation/changement de texte sur le survol (ludique)
-        nextButton.addEventListener('mouseover', () => {
-            if (hoverCount === 0) {
-                ctaArea.querySelector('p').textContent = "C'est l'heure de l'action !";
-            }
-            hoverCount++;
+        solutionSections.forEach(section => {
+            section.addEventListener('click', () => {
+                if (!section.classList.contains('validated')) {
+                    section.classList.add('validated');
+                    pillarsChecked++;
+                    updateEngagementStatus();
+                }
+            });
+            section.setAttribute('title', ">> CLIQUEZ POUR APPOSER LE CACHET D'APPROBATION <<");
         });
 
-        // 2. Initialisation pour un éventuel ajout futur d'animations GSAP ou de quiz
-        // Ici, vous ajouteriez la logique de chargement de données, de quiz ou de simulation.
+        function updateEngagementStatus() {
+            if (actionFinaleTitle) {
+                // Mise à jour du titre
+                actionFinaleTitle.textContent = `[ DOSSIER ] ${pillarsChecked} / ${totalPillars} Piliers Validés.`;
+                
+                if (pillarsChecked === totalPillars) {
+                    // Message final pour l'engagement
+                    actionFinaleTitle.innerHTML = ">>> VÉRITABLE RÉSISTANT : LE PLAN EST DÉVERROUILLÉ ! <<<";
+                    // Utilisation des variables CSS pour le style manuscrit/cachet
+                    actionFinaleTitle.style.color = 'var(--color-stamp-red)';
+                    actionFinaleTitle.style.textDecoration = 'underline wavy var(--color-stamp-red)';
+                }
+            }
+        }
         
-        console.log("Les éléments interactifs de la page d'accueil sont prêts.");
+        updateEngagementStatus();
     }
+    
+    // --- Fonctionnalité 2 : Animation sur le bouton d'accueil (index.php) ---
+    const btnNext = document.getElementById('btn-next');
+    const ctaParagraph = document.querySelector('#cta-area p');
 
+    if (btnNext && ctaParagraph) {
+        let originalText = ctaParagraph.textContent;
+        let changeTextTimeout;
+
+        btnNext.addEventListener('mouseover', () => {
+            // Changement de texte au survol pour un effet de "clignement d'alerte"
+            ctaParagraph.textContent = "ALERTE! L'ennemi est à la porte. DÉPLOIEMENT IMMÉDIAT !";
+        });
+
+        btnNext.addEventListener('mouseout', () => {
+            // Retour au texte original
+            ctaParagraph.textContent = originalText;
+        });
+    }
 });

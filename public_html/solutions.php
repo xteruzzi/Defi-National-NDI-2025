@@ -6,30 +6,44 @@ include '../src/functions.php';
 include '../src/includes/header.php';
 ?>
 
-<link rel="stylesheet" href="assets/css/style.css">
-
 <main class="container">
-    <h1>Les Solutions du NIRD : Pour un Numérique Autonome</h1>
+    <h1>PLAN D'ACTION : Les Trois Piliers NIRD du Village Résistant</h1>
     
-    <section class="pilier inclusif">
-        <h2>1. Numérique Inclusif</h2>
-        <p>Assurer l'accès et l'utilisation des outils numériques pour tous les élèves et enseignants.</p>
-    </section>
+    <div class="piliers-grid">
+        <section class="pilier inclusif card">
+            <h2>1. Numérique Inclusif 🤝</h2>
+            <p class="tagline">Garantir l'accès et l'usage pour tous, c'est la première ligne de défense contre l'Empire.</p>
+            <ul>
+                <li>Favoriser la co-construction de solutions numériques locales.</li>
+                <li>Mutualiser les ressources et outils libres via la Forge des communs numériques éducatifs.</li>
+                <li>Assurer l'accès aux outils numériques pour tous les élèves et enseignants.</li>
+            </ul>
+        </section>
+        
+        <section class="pilier responsable card">
+            <h2>2. Numérique Responsable 🛡️</h2>
+            <p class="tagline">Gestion éthique, souveraine et éco-citoyenne : nos données sont NOTRE territoire.</p>
+            <ul>
+                <li>Sensibiliser les équipes éducatives et les élèves à la sobriété numérique.</li>
+                <li>Utiliser des solutions locales et mutualisées pour éviter les écosystèmes fermés.</li>
+                <li>Adopter un numérique libre et écocitoyen au sein des établissements.</li>
+            </ul>
+        </section>
+
+        <section class="pilier durable card">
+            <h2>3. Numérique Durable ♻️</h2>
+            <p class="tagline">Prolonger la vie du matériel, car un outil qui fonctionne est une victoire contre l'obsolescence.</p>
+            <ul>
+                <li>Encourager le **réemploi** et le reconditionnement du matériel.</li>
+                <li>Promouvoir l'usage de **Linux** afin de lutter contre l'obsolescence programmée.</li>
+                <li>Prolonger la vie des milliers d'ordinateurs non compatibles avec les systèmes Big Tech.</li>
+            </ul>
+        </section>
+    </div>
     
-    <section class="pilier responsable">
-        <h2>2. Numérique Responsable</h2>
-        <p>Gérer les données de manière éthique et souveraine, en utilisant des solutions locales et mutualisées comme la Forge.</p>
-    </section>
-
-    <section class="pilier durable">
-        <h2>3. Numérique Durable (La Potion Magique)</h2>
-        <p>Lutter contre l'obsolescence en favorisant le **réemploi** et la migration vers les **logiciels libres** (comme Linux) sur le matériel existant.</p>
-    </section>
-
-    <section class="action-finale">
-        <h3>Prêt à devenir un Résistant ?</h3>
-        <p>Chacun, élève, enseignant ou collectivité, peut contribuer à l'autonomie du village numérique.</p>
-        <a href="index.php" class="btn-secondary">Retour à l'accueil</a>
+    <section class="action-finale" style="text-align: center; margin-top: 40px;">
+        <h3 style="font-family: var(--font-heading); color: var(--color-ink-dark);"> DOSSIER 0 / 3 Piliers Validés.</h3>
+        <p>Cliquez sur les cartes pour apposer le **Cachet d'Approbation** et valider ces stratégies de résistance.</p>
     </section>
 </main>
 
