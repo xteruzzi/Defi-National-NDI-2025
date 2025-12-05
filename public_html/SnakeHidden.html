@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Snake OS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- BUREAU -->
+    <div id="desktop">
+        <!-- Les icônes du bureau seront générées par JS -->
+    </div>
+
+    <!-- BARRE DES TÂCHES -->
+    <div class="taskbar">
+        <div class="taskbar-left">
+            <div class="start-button" id="start-btn">
+                <i class="fab fa-windows"></i>
+            </div>
+            <div class="search-box" id="search-btn">
+                <i class="fas fa-search"></i>
+                <span>Rechercher</span>
+            </div>
+        </div>
+
+        <div class="taskbar-center">
+            <div class="taskbar-items"></div>
+        </div>
+
+        <div class="taskbar-right">
+            <div class="system-tray">
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-volume-up"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+            <div class="clock" id="clock">00:00</div>
+        </div>
+    </div>
+
+    <!-- MENU DÉMARRER -->
+    <div class="start-menu" id="start-menu">
+        <div class="start-header">
+            <h3>Applications</h3>
+        </div>
+        <div class="start-apps">
+            <div class="app-item">
+                <i class="fas fa-folder"></i>
+                <span class="app-name">Explorateur</span>
+            </div>
+            <div class="app-item">
+                <i class="fas fa-cog"></i>
+                <span class="app-name">Paramètres</span>
+            </div>
+            <div class="app-item">
+                <i class="fas fa-calculator"></i>
+                <span class="app-name">Calculatrice</span>
+            </div>
+            <div class="app-item">
+                <i class="fas fa-file-alt"></i>
+                <span class="app-name">Bloc-notes</span>
+            </div>
+        </div>
+        <div class="start-footer">
+            <div class="user-profile">
+                <i class="fas fa-user-circle"></i>
+                <span>Utilisateur</span>
+            </div>
+            <div class="power-button">
+                <i class="fas fa-power-off"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRE DE RECHERCHE -->
+    <div class="search-bar" id="search-bar">
+        <div class="search-header">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Rechercher des fichiers..." autocomplete="off">
+            <button class="close-search" id="close-search">×</button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- MODAL CODE SECRET -->
+    <div class="code-modal" id="secret-code-modal">
+        <div class="modal-content">
+            <h2>🔐 Code Secret</h2>
+            <p>Entrez le code secret pour débloquer le jeu Snake</p>
+            <div class="code-input-container">
+                <input type="text" id="secret-code-input" placeholder="Code..." autocomplete="off" maxlength="20">
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-btn validate" id="submit-code">Valider</button>
+                <button class="modal-btn cancel" id="cancel-code">Annuler</button>
+            </div>
+            <div class="code-error hidden" id="code-error">Code incorrect !</div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATIONS (seront créées dynamiquement) -->
+
+    <script src="script.js"></script>
+</body>
+</html>
